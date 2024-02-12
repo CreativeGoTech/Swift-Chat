@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chat room</title>
+  
+  <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css">
+  
+  <!--css emoji-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/emojionearea/3.4.2/emojionearea.min.css" integrity="sha512-vEia6TQGr3FqC6h55/NdU3QSM5XR6HSl5fW71QTKrgeER98LIMGwymBVM867C1XHIkYD9nMTfWK2A0xcodKHNA==" crossorigin="anonymous"
+   referrerpolicy="no-referrer" />
+  
+  <script src="/webjars/jquery/jquery.min.js"></script>
+  <script src="/webjars/sockjs-client/sockjs.min.js"></script>
+  <script src="/webjars/stomp-websocket/stomp.min.js"></script>
+  <script src="/script.js"></script>
+  
+</head>
+<body>
+	
+	<div class="head" style="background-color: black; text-align: center; padding: 1px; ">
+    <h1 style="color: white;  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif  ;">SwiftChat</h1>
+  </div>
+
+
+ <div id="name-from" class="custom-bg d-flex align-items-center">
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-4 offset-md-4">
+          <div class="input-group">
+            <input type="text" placeholder="Enter name" id="name-value" autofocus class="form-control">
+            <div class="input-group-append">
+				
+				
+              <button class="btn btn-dark" id="login">Enter</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="chat-room" class="d-none">
+
+	  <div class="container-fluid">
+		  
+		  <div class="row">
+			 <div class="col-md-6 offset-md-3"> 
+				 
+				 
+				 <div class="card mt-3">
+					 <div class="card-header">
+						 <h3 id="name-title"></h3>
+						 </div>
+						 
+					 <div class="card-body" style="box-sizing: 10px;">
+						 
+						 
+
+<div class="input-group">
+    <input type="text" placeholder="Enter message" id="message-value" autofocus class="form-control">
+    <div class="input-group-append" style="padding:20px ;">
+		
+        <button class="btn btn-dark" id="send-btn">Send</button>
+
+        <button class="btn btn-dark" id="logout">Logout</button>
+    </div>
+</div>
+</div>
+ 
+				 
+						 
+  <div class="table-responsive">
+<table id="message-container-table">
+								
+</table>
+							
+							
+</div>
+</div>
+	</div>
+	</div>
+		  
+	  </div>
+  </div>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/emojionearea/3.4.2/emojionearea.min.js" integrity="sha512-hkvXFLlESjeYENO4CNi69z3A1puvONQV5Uh+G4TUDayZxSLyic5Kba9hhuiNLbHqdnKNMk2PxXKm0v7KDnWkYA==" crossorigin="anonymous"
+ referrerpolicy="no-referrer"></script>
+ 
+  
+  <script type="text/javascript">
+$('#message-value').emojioneArea({pickerPosition:'right'})
+</script>
+  
+  
+</body>
+</html>
