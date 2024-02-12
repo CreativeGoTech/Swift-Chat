@@ -5,6 +5,6 @@
  #              Backened : Spring Boot
 
  # how does it work..
- # It helps user to login via Name , and name is also diplayed with the chat send.
- # once logout , try to refresh it.
+ # - It helps user to login via Name , and name is also diplayed with the chat send.
+ #  - once logout , try to refresh it.
 # note: Open diffrent browser and make your chat.
